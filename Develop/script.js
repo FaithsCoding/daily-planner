@@ -1,29 +1,32 @@
-dayjs();
+var now = dayjs();
 
 //formats the data into day, month, year & time
-$("currentDay").text.format("LLLL");
+$("#currentDay").text(now.format("dddd, MMMM D YYYY, h:mm "));
 
 $(function changeColor() {
-  var currentTime = dayjs.hours();
+  var currentTime = dayjs().hour();
   console.log("current time" + currentTime);
 
-  $(".input").each(function () {
-    var scheduledTime = parseInt($(this).attr("id"));
-    console.log(scheduledTime);
-    if (currentTime > scheduledTime) {
-      $(this).removeClass("future");
-      $(this).removeClass("present");
-      $(this).addClass("past");
-    } else if (currentTime < scheduledTime) {
-      $(this).removeClass("present");
-      $(this).removeClass("past");
-      $(this).addClass("future");
-    } else {
-      $(this).removeClass("future");
-      $(this).removeClass("past");
-      $(this).addClass("present");
-    }
-  });
+    $(".input").each(function () {
+      var scheduledTime = parseInt($(this).attr("id"));
+      console.log(scheduledTime);
+      if (currentTime > scheduledTime) {
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+        $(this).addClass("past");
+      } else if (currentTime < scheduledTime) {
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+      } else {
+        $(this).removeClass("future");
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      }
+    });
+  }
+
+  changeColor(); // Call the function here or in response to some event
 });
 
 $(function renderText() {
@@ -71,7 +74,7 @@ $(function renderText() {
 var eventText;
 var eventTime;
 
-$("saveBtn").click(function () {
+$(".saveBtn").click(function () {
   eventText = $(this).siblings("input").val();
   console.log(eventText);
   eventTime = $(this).siblings("hour").text();
@@ -82,7 +85,7 @@ $("saveBtn").click(function () {
   renderText();
 });
 
-$("clearBtn").click(function () {
+$(".clearBtn").click(function () {
   eventText = $(this).siblings(".input").val("");
   eventText = $(this).siblings(".input").val();
   eventTime = $(this).siblings(".hour").text();
