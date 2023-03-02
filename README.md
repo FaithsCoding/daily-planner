@@ -36,8 +36,27 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+## Actual Behaviour
+
+```
+GIVEN that I have created a work day scheduler
+WHEN I open the planner
+THEN the correct date is being displayed using dayJS
+WHEN I scroll down the page I see that the current time slot is pink in color, past time slots will be grey and future time slots will be green
+THEN a user can click into a time-block,
+WHEN the user inputs their data then it is saved to the local storage
+THEN if the page is reloaded the text remains
+IF the user wants to clear their inputs
+THEN they click 'clear'
+WHEN a minute has passed the page will automatically reload so
+IF a user starts inputting into a time block at 1 minute to the hour
+THEN it will change accoringly on the hour
+
+
+
 The following animation demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
+[Work Day Scheduler](https://user-images.githubusercontent.com/122907573/222431348-a7088744-7fe0-4695-900a-92302811d31e.gif)
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+[Link to deployed website](https://faithscoding.github.io/daily-planner/)
+```
