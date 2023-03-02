@@ -58,5 +58,4 @@ The following animation demonstrates the application functionality:
 
 [Work Day Scheduler](https://user-images.githubusercontent.com/122907573/222431348-a7088744-7fe0-4695-900a-92302811d31e.gif)
 
-[Link to deployed website](https://faithscoding.github.io/daily-planner/)
-```
+https://faithscoding.github.io/daily-planner/
