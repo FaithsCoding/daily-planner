@@ -56,6 +56,6 @@ THEN it will change accoringly on the hour
 
 The following animation demonstrates the application functionality:
 
-[Work Day Scheduler](https://user-images.githubusercontent.com/122907573/222431348-a7088744-7fe0-4695-900a-92302811d31e.gif)
+![Work Day Scheduler](https://user-images.githubusercontent.com/122907573/222431348-a7088744-7fe0-4695-900a-92302811d31e.gif)
 
 https://faithscoding.github.io/daily-planner/
